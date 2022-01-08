@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* design system */
+:root {
+  /* Colors */
+  --cyanColor: #66e2dc;
+  --orangeColor: #fa7453;
+  --yellowColor: #ffb964;
+  --whiteColor: #fcfaf9;
+  --blackColor: #191826;
+
+  /* Typography */
+  /* sparcing -1 */
+  --H1: normal 700 5.5rem / 5.5rem "IBM Plex Sans";
+  --H2: normal 700 2.5rem / 3.25rem "IBM Plex Sans";
+  --Body1: normal 400 1.25rem / 2.125rem "IBM Plex Sans";
+  --Body2: normal 400 1rem / 1.625rem "IBM Plex Sans";
+
+  --containerTabletWidth: 696px;
+  --containerDesktopWidth: 1110px;
+
+  --figureWidth: 312px;
+}
+
+body {
+  overflow-x: hidden;
+  font: var(--Body1);
+  background-image: url(assets/bg-main-desktop.png);
+  background-position: 60% 110%;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+}
+
+.container-app {
+  margin: auto;
+  max-width: min(var(--containerDesktopWidth), 90%);
+}
+
+.logo {
+  margin-top: 61.99px;
+  margin-bottom: 127px;
+}
+
+.figure-pattern {
+  max-width: var(--figureWidth);
+  max-height: 468px;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  z-index: -1;
+}
+
+.header-title {
+  font: var(--H1);
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+  max-width: 1015px;
+}
+
+.header-paragraph {
+  max-width: 825px;
+}
+
+.cards {
+  margin-top: 321px;
+  height: 600px;
+  background-color: var(--blackColor);
+  border-radius: 10px;
+  position: relative;
+}
+
+.phone-image {
+  position: absolute;
+  width: 312px;
+  height: 642px;
+  bottom: 203px;
+  left: 102px;
+  z-index: 10;
+}
+
+.card-offer {
+  color: var(--whiteColor);
+  max-width: 446px;
+  max-height: 625px;
+  position: absolute;
+  background-color: var(--orangeColor);
+  padding: 54px 58px 59px 48px;
+  bottom: -125px;
+  right: 85px;
+  z-index: 100;
+}
+
+.card-title {
+  margin-bottom: 22px;
+  font: var(--H2);
+}
+
+.card-price {
+  margin-top: 39px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-price-value {
+  font: var(--H2);
+  font-size: 4.0625rem;
+}
+
+.card-actions {
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-action-button {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: -0.18px;
+  font-weight: 700;
+  height: 61px;
+  font-size: 1.125rem;
+  border-radius: 12px;
+  gap: 7.92px;
+}
+
+.ios {
+  color: var(--whiteColor);
+  background-color: var(--blackColor);
+}
+
+.android {
+  color: var(--blackColor);
+  background-color: var(--whiteColor);
+}
+
+.android:hover {
+  background-color: var(--yellowColor);
+}
+
+.ios:hover {
+  background-color: var(--cyanColor);
+}
+
+.pattern2 {
+  position: absolute;
+  left: 336px;
+  top: -40px;
+  width: 312px;
+  height: 468px;
+}
+
+.footer {
+  margin-top: 202px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 285px 366px 1fr;
+  grid-template-areas: "logo rights socials" "logo rights socials";
+  margin-bottom: 91px;
+}
+
+.footer-logo {
+  grid-area: logo;
+  align-self: flex-start;
+}
+
+.footer-rights {
+  grid-area: rights;
+  font-size: 1rem;
+}
+
+.footer-socialmedias {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  align-self: center;
+  gap: 20px;
+  grid-area: socials;
+}
+
+.footer-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--orangeColor);
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  body {
+    font: var(--Body2);
+    background-image: url(assets/bg-main-tablet.png);
+    background-position: 60% -30%;
+  }
+
+  .logo {
+    margin-bottom: 65px;
+  }
+
+  .header-title {
+    max-width: 520px;
+    letter-spacing: -0.73px;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 28px;
+  }
+
+  .header-paragraph {
+    max-width: 520px;
+  }
+
+  .phone-image {
+    left: 64px;
+    bottom: 138px;
+    width: 270px;
+    height: 556px;
+  }
+
+  .card-offer {
+    right: 58px;
+    bottom: -96px;
+    padding: 48px;
+  }
+
+  .pattern2 {
+    width: 280px;
+    height: 420px;
+    left: 229px;
+    top: -31px;
+  }
+
+  .cards {
+    margin-top: 249px;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .figure-pattern {
+    top: -32px;
+    left: 537px;
+    --figureWidth: 266.67px;
+  }
+
+  .header-title {
+    margin-bottom: 28px;
+  }
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: "logo . socials" "rights rights socials";
+    row-gap: 32px;
+    margin-bottom: 85px;
+  }
+
+  .footer-socialmedias {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url(assets/bg-main-mobile.png);
+    background-position: 10% -30%;
+  }
+
+  .logo {
+    margin-top: 40px;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: -0.45px;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    margin-top: 166px;
+    width: 100vw;
+    transform: translateX(-10%);
+  }
+
+  .footer {
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: "logo" "rights" "socials";
+  }
+  .footer-socialmedias {
+    justify-self: flex-start;
+  }
+
+  .phone-image {
+    width: 208px;
+    height: 430px;
+    bottom: 268px;
+  }
+
+  .pattern2 {
+    width: 280px;
+    height: 420px;
+    left: 40px;
+    top: 0px;
+  }
+
+  .card-offer {
+    right: 0;
+    left: 0;
+    bottom: -326px;
+    padding: 48px;
+  }
+
+  .footer {
+    margin-top: 390px;
+    margin-bottom: 80px;
+  }
+}
